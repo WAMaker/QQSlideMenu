@@ -14,6 +14,16 @@
 		CA46BCAA1B2749B5001F889F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA46BCA91B2749B5001F889F /* Images.xcassets */; };
 		CA46BCAD1B2749B5001F889F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA46BCAB1B2749B5001F889F /* LaunchScreen.xib */; };
 		CA46BCB91B2749B5001F889F /* QQSlideMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46BCB81B2749B5001F889F /* QQSlideMenuTests.m */; };
+		CA46BCC81B274D72001F889F /* WMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46BCC61B274D72001F889F /* WMHomeViewController.m */; };
+		CA46BCC91B274D72001F889F /* WMHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA46BCC71B274D72001F889F /* WMHomeViewController.xib */; };
+		CABBF5361B2A7ED400806576 /* WMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF5341B2A7ED300806576 /* WMMenuViewController.m */; };
+		CABBF5371B2A7ED400806576 /* WMMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABBF5351B2A7ED300806576 /* WMMenuViewController.xib */; };
+		CABBF53F1B2AFD2E00806576 /* WMMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF53E1B2AFD2E00806576 /* WMMenuTableViewCell.m */; };
+		CABBF5431B2D23F200806576 /* WMOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF5411B2D23F200806576 /* WMOtherViewController.m */; };
+		CABBF5441B2D23F200806576 /* WMOtherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABBF5421B2D23F200806576 /* WMOtherViewController.xib */; };
+		CABBF5471B2E8CA500806576 /* WMPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF5461B2E8CA500806576 /* WMPopAnimation.m */; };
+		CABBF54A1B2E8FC200806576 /* WMNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF5491B2E8FC200806576 /* WMNavigationInteractiveTransition.m */; };
+		CABBF54D1B2E913100806576 /* WMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF54C1B2E913100806576 /* WMNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,23 @@
 		CA46BCB21B2749B5001F889F /* QQSlideMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QQSlideMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA46BCB71B2749B5001F889F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA46BCB81B2749B5001F889F /* QQSlideMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQSlideMenuTests.m; sourceTree = "<group>"; };
+		CA46BCC51B274D72001F889F /* WMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeViewController.h; sourceTree = "<group>"; };
+		CA46BCC61B274D72001F889F /* WMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHomeViewController.m; sourceTree = "<group>"; };
+		CA46BCC71B274D72001F889F /* WMHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMHomeViewController.xib; sourceTree = "<group>"; };
+		CABBF5331B2A7ED300806576 /* WMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuViewController.h; sourceTree = "<group>"; };
+		CABBF5341B2A7ED300806576 /* WMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuViewController.m; sourceTree = "<group>"; };
+		CABBF5351B2A7ED300806576 /* WMMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMMenuViewController.xib; sourceTree = "<group>"; };
+		CABBF53D1B2AFD2E00806576 /* WMMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuTableViewCell.h; sourceTree = "<group>"; };
+		CABBF53E1B2AFD2E00806576 /* WMMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuTableViewCell.m; sourceTree = "<group>"; };
+		CABBF5401B2D23F200806576 /* WMOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMOtherViewController.h; sourceTree = "<group>"; };
+		CABBF5411B2D23F200806576 /* WMOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMOtherViewController.m; sourceTree = "<group>"; };
+		CABBF5421B2D23F200806576 /* WMOtherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMOtherViewController.xib; sourceTree = "<group>"; };
+		CABBF5451B2E8CA500806576 /* WMPopAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPopAnimation.h; sourceTree = "<group>"; };
+		CABBF5461B2E8CA500806576 /* WMPopAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPopAnimation.m; sourceTree = "<group>"; };
+		CABBF5481B2E8FC200806576 /* WMNavigationInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNavigationInteractiveTransition.h; sourceTree = "<group>"; };
+		CABBF5491B2E8FC200806576 /* WMNavigationInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNavigationInteractiveTransition.m; sourceTree = "<group>"; };
+		CABBF54B1B2E913100806576 /* WMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNavigationController.h; sourceTree = "<group>"; };
+		CABBF54C1B2E913100806576 /* WMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +108,7 @@
 		CA46BC9B1B2749B5001F889F /* QQSlideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				CA46BCA01B2749B5001F889F /* AppDelegate.h */,
-				CA46BCA11B2749B5001F889F /* AppDelegate.m */,
-				CA46BCA31B2749B5001F889F /* ViewController.h */,
-				CA46BCA41B2749B5001F889F /* ViewController.m */,
-				CA46BCA61B2749B5001F889F /* Main.storyboard */,
-				CA46BCA91B2749B5001F889F /* Images.xcassets */,
-				CA46BCAB1B2749B5001F889F /* LaunchScreen.xib */,
+				CABBF52E1B29C9F100806576 /* Classes */,
 				CA46BC9C1B2749B5001F889F /* Supporting Files */,
 			);
 			path = QQSlideMenu;
@@ -96,6 +117,9 @@
 		CA46BC9C1B2749B5001F889F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA46BCA61B2749B5001F889F /* Main.storyboard */,
+				CA46BCA91B2749B5001F889F /* Images.xcassets */,
+				CA46BCAB1B2749B5001F889F /* LaunchScreen.xib */,
 				CA46BC9D1B2749B5001F889F /* Info.plist */,
 				CA46BC9E1B2749B5001F889F /* main.m */,
 			);
@@ -117,6 +141,90 @@
 				CA46BCB71B2749B5001F889F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CABBF52E1B29C9F100806576 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CABBF5311B29CA3D00806576 /* Model */,
+				CABBF5321B29CA4500806576 /* View */,
+				CABBF5301B29CA0900806576 /* Controller */,
+				CABBF52F1B29C9FE00806576 /* Other */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		CABBF52F1B29C9FE00806576 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CABBF5501B2E92CD00806576 /* NavigationAnimation */,
+				CA46BCA01B2749B5001F889F /* AppDelegate.h */,
+				CA46BCA11B2749B5001F889F /* AppDelegate.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		CABBF5301B29CA0900806576 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CABBF54E1B2E926600806576 /* NavigationController */,
+				CA46BCA31B2749B5001F889F /* ViewController.h */,
+				CA46BCA41B2749B5001F889F /* ViewController.m */,
+				CA46BCC51B274D72001F889F /* WMHomeViewController.h */,
+				CA46BCC61B274D72001F889F /* WMHomeViewController.m */,
+				CA46BCC71B274D72001F889F /* WMHomeViewController.xib */,
+				CABBF5331B2A7ED300806576 /* WMMenuViewController.h */,
+				CABBF5341B2A7ED300806576 /* WMMenuViewController.m */,
+				CABBF5351B2A7ED300806576 /* WMMenuViewController.xib */,
+				CABBF5401B2D23F200806576 /* WMOtherViewController.h */,
+				CABBF5411B2D23F200806576 /* WMOtherViewController.m */,
+				CABBF5421B2D23F200806576 /* WMOtherViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CABBF5311B29CA3D00806576 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CABBF5321B29CA4500806576 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CABBF54F1B2E929100806576 /* Menu */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CABBF54E1B2E926600806576 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				CABBF54B1B2E913100806576 /* WMNavigationController.h */,
+				CABBF54C1B2E913100806576 /* WMNavigationController.m */,
+			);
+			name = NavigationController;
+			sourceTree = "<group>";
+		};
+		CABBF54F1B2E929100806576 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CABBF53D1B2AFD2E00806576 /* WMMenuTableViewCell.h */,
+				CABBF53E1B2AFD2E00806576 /* WMMenuTableViewCell.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		CABBF5501B2E92CD00806576 /* NavigationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				CABBF5451B2E8CA500806576 /* WMPopAnimation.h */,
+				CABBF5461B2E8CA500806576 /* WMPopAnimation.m */,
+				CABBF5481B2E8FC200806576 /* WMNavigationInteractiveTransition.h */,
+				CABBF5491B2E8FC200806576 /* WMNavigationInteractiveTransition.m */,
+			);
+			name = NavigationAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA46BCA81B2749B5001F889F /* Main.storyboard in Resources */,
+				CA46BCC91B274D72001F889F /* WMHomeViewController.xib in Resources */,
 				CA46BCAD1B2749B5001F889F /* LaunchScreen.xib in Resources */,
+				CABBF5441B2D23F200806576 /* WMOtherViewController.xib in Resources */,
+				CABBF5371B2A7ED400806576 /* WMMenuViewController.xib in Resources */,
 				CA46BCAA1B2749B5001F889F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +330,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABBF54A1B2E8FC200806576 /* WMNavigationInteractiveTransition.m in Sources */,
 				CA46BCA51B2749B5001F889F /* ViewController.m in Sources */,
+				CA46BCC81B274D72001F889F /* WMHomeViewController.m in Sources */,
 				CA46BCA21B2749B5001F889F /* AppDelegate.m in Sources */,
+				CABBF5361B2A7ED400806576 /* WMMenuViewController.m in Sources */,
+				CABBF53F1B2AFD2E00806576 /* WMMenuTableViewCell.m in Sources */,
+				CABBF5431B2D23F200806576 /* WMOtherViewController.m in Sources */,
+				CABBF54D1B2E913100806576 /* WMNavigationController.m in Sources */,
+				CABBF5471B2E8CA500806576 /* WMPopAnimation.m in Sources */,
 				CA46BC9F1B2749B5001F889F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +534,7 @@
 				CA46BCBE1B2749B5001F889F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA46BCBF1B2749B5001F889F /* Build configuration list for PBXNativeTarget "QQSlideMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +543,7 @@
 				CA46BCC11B2749B5001F889F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
