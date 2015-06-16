@@ -38,6 +38,7 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - tableView代理方法及数据源方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -55,6 +56,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([self.delegate respondsToSelector:@selector(didSelectItem:)]) {
         [self.delegate didSelectItem:self.listArray[indexPath.row]];
     }
