@@ -77,6 +77,13 @@
     if (self.sta == stateHome && x < 0) {
         return;
     }
+    // 当滑动水平X大于75时禁止滑动
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        self.panStartX = [recognizer locationInView:self.view].x;
+    }
+    if (self.sta == stateHome && self.panStartX >= 75) {
+        return;
+    }
     
     CGFloat dis = self.distance + x;
     // 当手势停止时执行操作

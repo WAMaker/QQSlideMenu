@@ -27,11 +27,11 @@ static const CGFloat menuNarrowRatio = 0.70;
 @property (assign, nonatomic) CGFloat distance;         // 距离左边的边距
 @property (assign, nonatomic) CGFloat menuCenterXStart; // menu起始中点的X
 @property (assign, nonatomic) CGFloat menuCenterXEnd;   // menu缩放结束中点的X
+@property (assign, nonatomic) CGFloat panStartX;        // 拖动开始的x值
 
 @property (strong, nonatomic) WMHomeViewController *homeVC;
 @property (strong, nonatomic) WMMenuViewController *menuVC;
 @property (strong, nonatomic) UIView *cover;
-//@property (strong, nonatomic) UINavigationController *messageNav;
 @property (strong, nonatomic) WMNavigationController *messageNav;
 @property (strong, nonatomic) UITabBarController *tabBarController;
 
