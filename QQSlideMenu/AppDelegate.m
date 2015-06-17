@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WMCommon.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    WMCommon *common = [WMCommon getInstance];
+    common.screenW = [[UIScreen mainScreen] bounds].size.width;
+    common.screenH = [[UIScreen mainScreen] bounds].size.height;
+    
     return YES;
 }
 

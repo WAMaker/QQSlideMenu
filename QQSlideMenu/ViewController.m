@@ -11,6 +11,7 @@
 #import "WMMenuViewController.h"
 #import "WMOtherViewController.h"
 #import "WMNavigationController.h"
+#import "WMCommon.h"
 
 @interface ViewController () <WMHomeViewControllerDelegate, WMMenuViewControllerDelegate>
 
@@ -21,12 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.common = [WMCommon getInstance];
     self.sta = stateHome;
     self.distance = 0;
-    self.screenW = [[UIScreen mainScreen] bounds].size.width;
-    self.screenH = [[UIScreen mainScreen] bounds].size.height;
-    self.menuCenterXStart = self.screenW * menuNarrowRatio / 2.0;
+    self.menuCenterXStart = self.common.screenW * menuStartNarrowRatio / 2.0;
     self.menuCenterXEnd = self.view.center.x;
+    self.leftDistance = self.common.screenW * viewSlideHorizonRatio;
     
     // 设置背景
     UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back"]];
@@ -36,7 +37,7 @@
     // 设置menu的view
     self.menuVC = [[WMMenuViewController alloc] init];
     self.menuVC.view.frame = [[UIScreen mainScreen] bounds];
-    self.menuVC.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, menuNarrowRatio, menuNarrowRatio);
+    self.menuVC.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, menuStartNarrowRatio, menuStartNarrowRatio);
     self.menuVC.view.center = CGPointMake(self.menuCenterXStart, self.menuVC.view.center.y);
     [self.view addSubview:self.menuVC.view];
     self.menuVC.delegate = self;
@@ -46,6 +47,7 @@
     self.cover.backgroundColor = [UIColor blackColor];
     [self.view addSubview:self.cover];
     
+    // 添加tabBarController
     self.tabBarController = [[UITabBarController alloc] init];
     
     self.homeVC = [[WMHomeViewController alloc] init];
@@ -66,17 +68,20 @@
     [self.view addSubview:self.tabBarController.view];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 /**
  *  处理拖动事件
  *
  *  @param recognizer
  */
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer {
-    CGFloat x = [recognizer translationInView:self.view].x;
-    // 禁止在主界面的时候向左滑动
-    if (self.sta == stateHome && x < 0) {
-        return;
-    }
     // 当滑动水平X大于75时禁止滑动
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         self.panStartX = [recognizer locationInView:self.view].x;
@@ -85,10 +90,16 @@
         return;
     }
     
+    CGFloat x = [recognizer translationInView:self.view].x;
+    // 禁止在主界面的时候向左滑动
+    if (self.sta == stateHome && x < 0) {
+        return;
+    }
+    
     CGFloat dis = self.distance + x;
     // 当手势停止时执行操作
     if (recognizer.state == UIGestureRecognizerStateEnded) {
-        if (dis >= self.screenW * slideWRatio / 2.0) {
+        if (dis >= self.common.screenW * viewSlideHorizonRatio / 2.0) {
             [self showMenu];
         } else {
             [self showHome];
@@ -96,17 +107,17 @@
         return;
     }
     
-    CGFloat proportion = (slideHRatio - 1) * dis / (self.screenW * slideWRatio) + 1;
-    if (proportion < slideHRatio || proportion > 1) {
+    CGFloat proportion = (viewHeightNarrowRatio - 1) * dis / self.leftDistance + 1;
+    if (proportion < viewHeightNarrowRatio || proportion > 1) {
         return;
     }
     self.tabBarController.view.center = CGPointMake(self.view.center.x + dis, self.view.center.y);
     self.tabBarController.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, proportion, proportion);
     
-    self.homeVC.leftBtn.alpha = self.cover.alpha = 1 - dis / (self.screenW * slideWRatio);
+    self.homeVC.leftBtn.alpha = self.cover.alpha = 1 - dis / self.leftDistance;
     
-    CGFloat menuProportion = dis * (1 - menuNarrowRatio) / (self.screenW * slideWRatio) + menuNarrowRatio;
-    CGFloat menuCenterMove = dis * (self.menuCenterXEnd - self.menuCenterXStart) / (self.screenW * slideWRatio);
+    CGFloat menuProportion = dis * (1 - menuStartNarrowRatio) / self.leftDistance + menuStartNarrowRatio;
+    CGFloat menuCenterMove = dis * (self.menuCenterXEnd - self.menuCenterXStart) / self.leftDistance;
     self.menuVC.view.center = CGPointMake(self.menuCenterXStart + menuCenterMove, self.view.center.y);
     self.menuVC.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, menuProportion, menuProportion);
 }
@@ -115,9 +126,9 @@
  *  展示侧边栏
  */
 - (void)showMenu {
-    self.distance = self.screenW * slideWRatio;
+    self.distance = self.leftDistance;
     self.sta = stateMenu;
-    [self doSlide:slideHRatio];
+    [self doSlide:viewHeightNarrowRatio];
 }
 
 /**
@@ -145,7 +156,7 @@
         CGFloat menuProportion;
         if (proportion == 1) {
             menuCenterX = self.menuCenterXStart;
-            menuProportion = menuNarrowRatio;
+            menuProportion = menuStartNarrowRatio;
         } else {
             menuCenterX = self.menuCenterXEnd;
             menuProportion = 1;
@@ -169,14 +180,6 @@
     other.hidesBottomBarWhenPushed = YES;
     [self.messageNav pushViewController:other animated:NO];
     [self showHome];
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 @end

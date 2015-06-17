@@ -8,14 +8,14 @@
 
 #import "WMMenuViewController.h"
 #import "WMMenuTableViewCell.h"
+#import "WMCommon.h"
 
 @interface WMMenuViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *nightModeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *settingBtn;
-- (IBAction)btnClick:(id)sender;
 
-@property (strong ,nonatomic) NSArray *listArray;
+- (IBAction)btnClick:(id)sender;
 
 @end
 
@@ -24,18 +24,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.common = [WMCommon getInstance];
+    
     self.listArray = [NSArray arrayWithObjects:@"开通会员", @"QQ钱包", @"网上营业厅", @"个性装扮", @"我的收藏", @"我的相册", @"我的文件", nil];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.rowHeight = 44 * ([[UIScreen mainScreen] bounds].size.width / 320);
+    self.tableView.rowHeight = 44 * (self.common.screenW / 320);
     // 设置tableFooterView为一个空的View，这样就不会显示多余的空白格子了
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)btnClick:(id)sender {
+    if (sender == self.nightModeBtn) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"使用提示" message:@"要使用夜间模式需下载主题包，立即下载？" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"立即下载", nil];
+        [alertView show];
+    } else {
+        if ([self.delegate respondsToSelector:@selector(didSelectItem:)]) {
+            [self.delegate didSelectItem:self.settingBtn.titleLabel.text];
+        }
+    }
 }
 
 #pragma mark - tableView代理方法及数据源方法
@@ -59,17 +72,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([self.delegate respondsToSelector:@selector(didSelectItem:)]) {
         [self.delegate didSelectItem:self.listArray[indexPath.row]];
-    }
-}
-
-- (void)btnClick:(id)sender {
-    if (sender == self.nightModeBtn) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"使用提示" message:@"要使用夜间模式需下载主题包，立即下载？" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"立即下载", nil];
-        [alertView show];
-    } else {
-        if ([self.delegate respondsToSelector:@selector(didSelectItem:)]) {
-            [self.delegate didSelectItem:self.settingBtn.titleLabel.text];
-        }
     }
 }
 

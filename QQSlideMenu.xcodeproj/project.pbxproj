@@ -16,6 +16,7 @@
 		CA46BCB91B2749B5001F889F /* QQSlideMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46BCB81B2749B5001F889F /* QQSlideMenuTests.m */; };
 		CA46BCC81B274D72001F889F /* WMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46BCC61B274D72001F889F /* WMHomeViewController.m */; };
 		CA46BCC91B274D72001F889F /* WMHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA46BCC71B274D72001F889F /* WMHomeViewController.xib */; };
+		CAA130921B3122CE00852C09 /* WMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA130911B3122CE00852C09 /* WMCommon.m */; };
 		CABBF5361B2A7ED400806576 /* WMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF5341B2A7ED300806576 /* WMMenuViewController.m */; };
 		CABBF5371B2A7ED400806576 /* WMMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABBF5351B2A7ED300806576 /* WMMenuViewController.xib */; };
 		CABBF53F1B2AFD2E00806576 /* WMMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF53E1B2AFD2E00806576 /* WMMenuTableViewCell.m */; };
@@ -53,6 +54,8 @@
 		CA46BCC51B274D72001F889F /* WMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeViewController.h; sourceTree = "<group>"; };
 		CA46BCC61B274D72001F889F /* WMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHomeViewController.m; sourceTree = "<group>"; };
 		CA46BCC71B274D72001F889F /* WMHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMHomeViewController.xib; sourceTree = "<group>"; };
+		CAA130901B3122CE00852C09 /* WMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCommon.h; sourceTree = "<group>"; };
+		CAA130911B3122CE00852C09 /* WMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCommon.m; sourceTree = "<group>"; };
 		CABBF5331B2A7ED300806576 /* WMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuViewController.h; sourceTree = "<group>"; };
 		CABBF5341B2A7ED300806576 /* WMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuViewController.m; sourceTree = "<group>"; };
 		CABBF5351B2A7ED300806576 /* WMMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMMenuViewController.xib; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 		CABBF5311B29CA3D00806576 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CAA130901B3122CE00852C09 /* WMCommon.h */,
+				CAA130911B3122CE00852C09 /* WMCommon.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 			files = (
 				CABBF54A1B2E8FC200806576 /* WMNavigationInteractiveTransition.m in Sources */,
 				CA46BCA51B2749B5001F889F /* ViewController.m in Sources */,
+				CAA130921B3122CE00852C09 /* WMCommon.m in Sources */,
 				CA46BCC81B274D72001F889F /* WMHomeViewController.m in Sources */,
 				CA46BCA21B2749B5001F889F /* AppDelegate.m in Sources */,
 				CABBF5361B2A7ED400806576 /* WMMenuViewController.m in Sources */,
