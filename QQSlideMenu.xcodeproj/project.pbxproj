@@ -11,11 +11,12 @@
 		CA46BCA21B2749B5001F889F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46BCA11B2749B5001F889F /* AppDelegate.m */; };
 		CA46BCA51B2749B5001F889F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46BCA41B2749B5001F889F /* ViewController.m */; };
 		CA46BCA81B2749B5001F889F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA46BCA61B2749B5001F889F /* Main.storyboard */; };
-		CA46BCAA1B2749B5001F889F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA46BCA91B2749B5001F889F /* Images.xcassets */; };
 		CA46BCAD1B2749B5001F889F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA46BCAB1B2749B5001F889F /* LaunchScreen.xib */; };
 		CA46BCB91B2749B5001F889F /* QQSlideMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46BCB81B2749B5001F889F /* QQSlideMenuTests.m */; };
 		CA46BCC81B274D72001F889F /* WMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46BCC61B274D72001F889F /* WMHomeViewController.m */; };
 		CA46BCC91B274D72001F889F /* WMHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA46BCC71B274D72001F889F /* WMHomeViewController.xib */; };
+		CA64EED41B37187B00A7A969 /* WMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA64EED31B37187B00A7A969 /* WMBaseViewController.m */; };
+		CA64EED61B37207500A7A969 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA64EED51B37207500A7A969 /* Images.xcassets */; };
 		CAA130921B3122CE00852C09 /* WMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA130911B3122CE00852C09 /* WMCommon.m */; };
 		CABBF5361B2A7ED400806576 /* WMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF5341B2A7ED300806576 /* WMMenuViewController.m */; };
 		CABBF5371B2A7ED400806576 /* WMMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABBF5351B2A7ED300806576 /* WMMenuViewController.xib */; };
@@ -46,7 +47,6 @@
 		CA46BCA31B2749B5001F889F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CA46BCA41B2749B5001F889F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CA46BCA71B2749B5001F889F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CA46BCA91B2749B5001F889F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA46BCAC1B2749B5001F889F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CA46BCB21B2749B5001F889F /* QQSlideMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QQSlideMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA46BCB71B2749B5001F889F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +54,9 @@
 		CA46BCC51B274D72001F889F /* WMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeViewController.h; sourceTree = "<group>"; };
 		CA46BCC61B274D72001F889F /* WMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHomeViewController.m; sourceTree = "<group>"; };
 		CA46BCC71B274D72001F889F /* WMHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMHomeViewController.xib; sourceTree = "<group>"; };
+		CA64EED21B37187B00A7A969 /* WMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBaseViewController.h; sourceTree = "<group>"; };
+		CA64EED31B37187B00A7A969 /* WMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBaseViewController.m; sourceTree = "<group>"; };
+		CA64EED51B37207500A7A969 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAA130901B3122CE00852C09 /* WMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCommon.h; sourceTree = "<group>"; };
 		CAA130911B3122CE00852C09 /* WMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCommon.m; sourceTree = "<group>"; };
 		CABBF5331B2A7ED300806576 /* WMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuViewController.h; sourceTree = "<group>"; };
@@ -120,8 +123,8 @@
 		CA46BC9C1B2749B5001F889F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA64EED51B37207500A7A969 /* Images.xcassets */,
 				CA46BCA61B2749B5001F889F /* Main.storyboard */,
-				CA46BCA91B2749B5001F889F /* Images.xcassets */,
 				CA46BCAB1B2749B5001F889F /* LaunchScreen.xib */,
 				CA46BC9D1B2749B5001F889F /* Info.plist */,
 				CA46BC9E1B2749B5001F889F /* main.m */,
@@ -171,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				CABBF54E1B2E926600806576 /* NavigationController */,
+				CA64EED21B37187B00A7A969 /* WMBaseViewController.h */,
+				CA64EED31B37187B00A7A969 /* WMBaseViewController.m */,
 				CA46BCA31B2749B5001F889F /* ViewController.h */,
 				CA46BCA41B2749B5001F889F /* ViewController.m */,
 				CA46BCC51B274D72001F889F /* WMHomeViewController.h */,
@@ -315,9 +320,9 @@
 				CA46BCA81B2749B5001F889F /* Main.storyboard in Resources */,
 				CA46BCC91B274D72001F889F /* WMHomeViewController.xib in Resources */,
 				CA46BCAD1B2749B5001F889F /* LaunchScreen.xib in Resources */,
+				CA64EED61B37207500A7A969 /* Images.xcassets in Resources */,
 				CABBF5441B2D23F200806576 /* WMOtherViewController.xib in Resources */,
 				CABBF5371B2A7ED400806576 /* WMMenuViewController.xib in Resources */,
-				CA46BCAA1B2749B5001F889F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +350,7 @@
 				CABBF5431B2D23F200806576 /* WMOtherViewController.m in Sources */,
 				CABBF54D1B2E913100806576 /* WMNavigationController.m in Sources */,
 				CABBF5471B2E8CA500806576 /* WMPopAnimation.m in Sources */,
+				CA64EED41B37187B00A7A969 /* WMBaseViewController.m in Sources */,
 				CA46BC9F1B2749B5001F889F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

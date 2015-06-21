@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WMMenuViewController">
             <connections>
+                <outlet property="headerImageView" destination="YkR-PW-D1O" id="EeX-di-ino"/>
                 <outlet property="nightModeBtn" destination="5yS-xv-Ard" id="39U-Hn-ewo"/>
                 <outlet property="settingBtn" destination="Mp4-C3-CDa" id="V9N-Xi-qUl"/>
                 <outlet property="tableView" destination="eGt-Fe-0zL" id="CCg-sn-6S6"/>
@@ -17,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="YkR-PW-D1O">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="YkR-PW-D1O">
                     <rect key="frame" x="8" y="55" width="56" height="56"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="56" id="GqI-6u-qzl"/>
@@ -142,7 +143,7 @@
         </view>
     </objects>
     <resources>
-        <image name="gold" width="56" height="56"/>
+        <image name="me" width="250" height="250"/>
         <image name="setting" width="28" height="28"/>
         <image name="star" width="26" height="27"/>
     </resources>

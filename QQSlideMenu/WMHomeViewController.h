@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WMBaseViewController.h"
 
 @protocol WMHomeViewControllerDelegate <NSObject>
 @optional
@@ -14,7 +15,7 @@
 
 @end
 
-@interface WMHomeViewController : UIViewController
+@interface WMHomeViewController : WMBaseViewController
 @property (weak, nonatomic) UIButton *leftBtn;
 @property (weak, nonatomic) id<WMHomeViewControllerDelegate> delegate;
 

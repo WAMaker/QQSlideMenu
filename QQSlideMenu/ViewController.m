@@ -13,7 +13,29 @@
 #import "WMNavigationController.h"
 #import "WMCommon.h"
 
+typedef enum state {
+    kStateHome,
+    kStateMenu
+}state;
+
+static const CGFloat viewSlideHorizonRatio = 0.75;
+static const CGFloat viewHeightNarrowRatio = 0.80;
+static const CGFloat menuStartNarrowRatio = 0.70;
+
 @interface ViewController () <WMHomeViewControllerDelegate, WMMenuViewControllerDelegate>
+@property (assign, nonatomic) state   sta;              // 状态(Home or Menu)
+@property (assign, nonatomic) CGFloat distance;         // 距离左边的边距
+@property (assign, nonatomic) CGFloat leftDistance;
+@property (assign, nonatomic) CGFloat menuCenterXStart; // menu起始中点的X
+@property (assign, nonatomic) CGFloat menuCenterXEnd;   // menu缩放结束中点的X
+@property (assign, nonatomic) CGFloat panStartX;        // 拖动开始的x值
+
+@property (strong, nonatomic) WMCommon               *common;
+@property (strong, nonatomic) WMHomeViewController   *homeVC;
+@property (strong, nonatomic) WMMenuViewController   *menuVC;
+@property (strong, nonatomic) WMNavigationController *messageNav;
+@property (strong, nonatomic) UIView                 *cover;
+@property (strong, nonatomic) UITabBarController     *tabBarController;
 
 @end
 
@@ -23,7 +45,7 @@
     [super viewDidLoad];
     
     self.common = [WMCommon getInstance];
-    self.sta = stateHome;
+    self.sta = kStateHome;
     self.distance = 0;
     self.menuCenterXStart = self.common.screenW * menuStartNarrowRatio / 2.0;
     self.menuCenterXEnd = self.view.center.x;
@@ -68,12 +90,11 @@
     [self.view addSubview:self.tabBarController.view];
 }
 
+/**
+ *  设置statusbar的状态
+ */
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 /**
@@ -86,13 +107,13 @@
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         self.panStartX = [recognizer locationInView:self.view].x;
     }
-    if (self.sta == stateHome && self.panStartX >= 75) {
+    if (self.sta == kStateHome && self.panStartX >= 75) {
         return;
     }
     
     CGFloat x = [recognizer translationInView:self.view].x;
     // 禁止在主界面的时候向左滑动
-    if (self.sta == stateHome && x < 0) {
+    if (self.sta == kStateHome && x < 0) {
         return;
     }
     
@@ -127,7 +148,7 @@
  */
 - (void)showMenu {
     self.distance = self.leftDistance;
-    self.sta = stateMenu;
+    self.sta = kStateMenu;
     [self doSlide:viewHeightNarrowRatio];
 }
 
@@ -136,7 +157,7 @@
  */
 - (void)showHome {
     self.distance = 0;
-    self.sta = stateHome;
+    self.sta = kStateHome;
     [self doSlide:1];
 }
 

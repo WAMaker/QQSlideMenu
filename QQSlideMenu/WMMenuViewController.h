@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class WMCommon;
+#import "WMBaseViewController.h"
 
 @protocol WMMenuViewControllerDelegate <NSObject>
 @optional
@@ -15,10 +15,7 @@
 
 @end
 
-@interface WMMenuViewController : UIViewController
-@property (strong, nonatomic) WMCommon *common;
-@property (strong ,nonatomic) NSArray *listArray;
-
+@interface WMMenuViewController : WMBaseViewController
 @property (weak, nonatomic) id<WMMenuViewControllerDelegate> delegate;
 
 @end

@@ -22,8 +22,4 @@
     self.navigationItem.title = self.navTitle;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 @end

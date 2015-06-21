@@ -7,10 +7,7 @@
 //
 
 #import "WMHomeViewController.h"
-
-@interface WMHomeViewController ()
-
-@end
+#import "WMBaseViewController.h"
 
 @implementation WMHomeViewController
 
@@ -26,10 +23,14 @@
     [segmentedControl setWidth:60 forSegmentAtIndex:1];
     self.navigationItem.titleView = segmentedControl;
     
+    UIImageView *original = [[UIImageView alloc] init];
+    original.frame = CGRectMake(0, 0, 33, 33);
+    original.image = [UIImage imageNamed:@"me"];
+    
     self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.leftBtn.frame = CGRectMake(0, 0, 33, 33);
     [self.leftBtn addTarget:self action:@selector(clicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.leftBtn setImage:[UIImage imageNamed:@"gold"] forState:UIControlStateNormal];
+    [self.leftBtn setImage:[self getRoundImage:original] forState:UIControlStateNormal];
     UIBarButtonItem *barLeftBtn = [[UIBarButtonItem alloc]initWithCustomView:self.leftBtn];
     [self.navigationItem setLeftBarButtonItem:barLeftBtn];
 }
@@ -38,10 +39,6 @@
     if ([self.delegate respondsToSelector:@selector(leftBtnClicked)]) {
         [self.delegate leftBtnClicked];
     }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 @end

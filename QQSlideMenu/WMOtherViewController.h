@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WMBaseViewController.h"
 
-@interface WMOtherViewController : UIViewController
+@interface WMOtherViewController : WMBaseViewController
 @property (copy, nonatomic) NSString *navTitle;
 
 @end
