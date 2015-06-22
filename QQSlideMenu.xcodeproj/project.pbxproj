@@ -26,6 +26,7 @@
 		CABBF5471B2E8CA500806576 /* WMPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF5461B2E8CA500806576 /* WMPopAnimation.m */; };
 		CABBF54A1B2E8FC200806576 /* WMNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF5491B2E8FC200806576 /* WMNavigationInteractiveTransition.m */; };
 		CABBF54D1B2E913100806576 /* WMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF54C1B2E913100806576 /* WMNavigationController.m */; };
+		CAEA22001B3859C600A8322A /* UIImage+WM.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEA21FF1B3859C600A8322A /* UIImage+WM.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		CABBF5491B2E8FC200806576 /* WMNavigationInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNavigationInteractiveTransition.m; sourceTree = "<group>"; };
 		CABBF54B1B2E913100806576 /* WMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNavigationController.h; sourceTree = "<group>"; };
 		CABBF54C1B2E913100806576 /* WMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNavigationController.m; sourceTree = "<group>"; };
+		CAEA21FE1B3859C600A8322A /* UIImage+WM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WM.h"; sourceTree = "<group>"; };
+		CAEA21FF1B3859C600A8322A /* UIImage+WM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WM.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +206,7 @@
 		CABBF5321B29CA4500806576 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CAEA21FD1B3859B000A8322A /* UIImage+WM */,
 				CABBF54F1B2E929100806576 /* Menu */,
 			);
 			name = View;
@@ -235,6 +239,15 @@
 				CABBF5491B2E8FC200806576 /* WMNavigationInteractiveTransition.m */,
 			);
 			name = NavigationAnimation;
+			sourceTree = "<group>";
+		};
+		CAEA21FD1B3859B000A8322A /* UIImage+WM */ = {
+			isa = PBXGroup;
+			children = (
+				CAEA21FE1B3859C600A8322A /* UIImage+WM.h */,
+				CAEA21FF1B3859C600A8322A /* UIImage+WM.m */,
+			);
+			name = "UIImage+WM";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +361,7 @@
 				CABBF5361B2A7ED400806576 /* WMMenuViewController.m in Sources */,
 				CABBF53F1B2AFD2E00806576 /* WMMenuTableViewCell.m in Sources */,
 				CABBF5431B2D23F200806576 /* WMOtherViewController.m in Sources */,
+				CAEA22001B3859C600A8322A /* UIImage+WM.m in Sources */,
 				CABBF54D1B2E913100806576 /* WMNavigationController.m in Sources */,
 				CABBF5471B2E8CA500806576 /* WMPopAnimation.m in Sources */,
 				CA64EED41B37187B00A7A969 /* WMBaseViewController.m in Sources */,
