@@ -14,10 +14,9 @@
 @end
 
 @implementation WMOtherViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
     self.label.text = self.navTitle;
     self.navigationItem.title = self.navTitle;
 }

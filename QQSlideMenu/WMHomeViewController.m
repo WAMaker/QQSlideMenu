@@ -7,10 +7,9 @@
 //
 
 #import "WMHomeViewController.h"
-#import "WMBaseViewController.h"
+#import "UIImage+WM.h"
 
 @implementation WMHomeViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,7 +29,7 @@
     self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.leftBtn.frame = CGRectMake(0, 0, 33, 33);
     [self.leftBtn addTarget:self action:@selector(clicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.leftBtn setImage:[self getRoundImage:original] forState:UIControlStateNormal];
+    [self.leftBtn setImage:[[UIImage imageNamed:@"me"] getRoundImage] forState:UIControlStateNormal];
     UIBarButtonItem *barLeftBtn = [[UIBarButtonItem alloc]initWithCustomView:self.leftBtn];
     [self.navigationItem setLeftBarButtonItem:barLeftBtn];
 }

@@ -9,14 +9,15 @@
 #import "WMMenuViewController.h"
 #import "WMMenuTableViewCell.h"
 #import "WMCommon.h"
+#import "UIImage+WM.h"
 
 @interface WMMenuViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) WMCommon *common;
-@property (strong ,nonatomic) NSArray *listArray;
+@property (strong ,nonatomic) NSArray  *listArray;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIButton *nightModeBtn;
-@property (weak, nonatomic) IBOutlet UIButton *settingBtn;
+@property (weak, nonatomic) IBOutlet UIButton    *nightModeBtn;
+@property (weak, nonatomic) IBOutlet UIButton    *settingBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 
 - (IBAction)btnClick:(id)sender;
@@ -24,7 +25,6 @@
 @end
 
 @implementation WMMenuViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -32,14 +32,14 @@
     
     self.listArray = @[@"开通会员", @"QQ钱包", @"网上营业厅", @"个性装扮", @"我的收藏", @"我的相册", @"我的文件"];
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.rowHeight = 44 * (self.common.screenW / 320);
+    self.tableView.delegate        = self;
+    self.tableView.dataSource      = self;
+    self.tableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
+    self.tableView.rowHeight       = 44 * (self.common.screenW / 320);
     // 设置tableFooterView为一个空的View，这样就不会显示多余的空白格子了
     self.tableView.tableFooterView = [[UIView alloc] init];
     
-    self.headerImageView.image = [self getRoundImage:self.headerImageView];
+    self.headerImageView.image = [[UIImage imageNamed:@"me"] getRoundImage];
 }
 
 - (void)btnClick:(id)sender {

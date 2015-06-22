@@ -20,7 +20,7 @@ typedef enum state {
 
 static const CGFloat viewSlideHorizonRatio = 0.75;
 static const CGFloat viewHeightNarrowRatio = 0.80;
-static const CGFloat menuStartNarrowRatio = 0.70;
+static const CGFloat menuStartNarrowRatio  = 0.70;
 
 @interface ViewController () <WMHomeViewControllerDelegate, WMMenuViewControllerDelegate>
 @property (assign, nonatomic) state   sta;              // 状态(Home or Menu)
@@ -40,7 +40,6 @@ static const CGFloat menuStartNarrowRatio = 0.70;
 @end
 
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -53,16 +52,16 @@ static const CGFloat menuStartNarrowRatio = 0.70;
     
     // 设置背景
     UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back"]];
-    bg.frame = [[UIScreen mainScreen] bounds];
+    bg.frame        = [[UIScreen mainScreen] bounds];
     [self.view addSubview:bg];
     
     // 设置menu的view
     self.menuVC = [[WMMenuViewController alloc] init];
+    self.menuVC.delegate = self;
     self.menuVC.view.frame = [[UIScreen mainScreen] bounds];
     self.menuVC.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, menuStartNarrowRatio, menuStartNarrowRatio);
     self.menuVC.view.center = CGPointMake(self.menuCenterXStart, self.menuVC.view.center.y);
     [self.view addSubview:self.menuVC.view];
-    self.menuVC.delegate = self;
     
     // 设置遮盖
     self.cover = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

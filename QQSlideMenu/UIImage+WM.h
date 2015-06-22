@@ -1,5 +1,5 @@
 //
-//  WMBaseViewController.h
+//  UIImage+WM.h
 //  QQSlideMenu
 //
 //  Created by wamaker on 15/6/22.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WMBaseViewController : UIViewController
+@interface UIImage (WM)
+- (instancetype)getRoundImage;
 
 @end
