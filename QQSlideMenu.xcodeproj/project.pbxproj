@@ -27,6 +27,7 @@
 		CABBF54A1B2E8FC200806576 /* WMNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF5491B2E8FC200806576 /* WMNavigationInteractiveTransition.m */; };
 		CABBF54D1B2E913100806576 /* WMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABBF54C1B2E913100806576 /* WMNavigationController.m */; };
 		CAEA22001B3859C600A8322A /* UIImage+WM.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEA21FF1B3859C600A8322A /* UIImage+WM.m */; };
+		F47D45D1B3159DB63FF86F5E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD6607524AA69D3B9A966D3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		398EDCA951CE59FB1D9B3DFA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		46E5EEF1070296AED69A77E1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA46BC991B2749B5001F889F /* QQSlideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQSlideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA46BC9D1B2749B5001F889F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA46BC9E1B2749B5001F889F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 		CABBF54C1B2E913100806576 /* WMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNavigationController.m; sourceTree = "<group>"; };
 		CAEA21FE1B3859C600A8322A /* UIImage+WM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WM.h"; sourceTree = "<group>"; };
 		CAEA21FF1B3859C600A8322A /* UIImage+WM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WM.m"; sourceTree = "<group>"; };
+		FDD6607524AA69D3B9A966D3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47D45D1B3159DB63FF86F5E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +101,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A961068EF59238E974AAE28E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDD6607524AA69D3B9A966D3 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA46BC901B2749B5001F889F = {
 			isa = PBXGroup;
 			children = (
 				CA46BC9B1B2749B5001F889F /* QQSlideMenu */,
 				CA46BCB51B2749B5001F889F /* QQSlideMenuTests */,
 				CA46BC9A1B2749B5001F889F /* Products */,
+				FEA68832A3ED5F0397AD47AA /* Pods */,
+				A961068EF59238E974AAE28E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,6 +265,15 @@
 			name = "UIImage+WM";
 			sourceTree = "<group>";
 		};
+		FEA68832A3ED5F0397AD47AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				398EDCA951CE59FB1D9B3DFA /* Pods.debug.xcconfig */,
+				46E5EEF1070296AED69A77E1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,9 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA46BCBC1B2749B5001F889F /* Build configuration list for PBXNativeTarget "QQSlideMenu" */;
 			buildPhases = (
+				8C75B764585061E70F1B83EA /* Check Pods Manifest.lock */,
 				CA46BC951B2749B5001F889F /* Sources */,
 				CA46BC961B2749B5001F889F /* Frameworks */,
 				CA46BC971B2749B5001F889F /* Resources */,
+				DD3EC1C627E02A8CBEBBD616 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,6 +373,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8C75B764585061E70F1B83EA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DD3EC1C627E02A8CBEBBD616 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA46BC951B2749B5001F889F /* Sources */ = {
@@ -489,6 +548,7 @@
 		};
 		CA46BCBD1B2749B5001F889F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 398EDCA951CE59FB1D9B3DFA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QQSlideMenu/Info.plist;
@@ -499,6 +559,7 @@
 		};
 		CA46BCBE1B2749B5001F889F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46E5EEF1070296AED69A77E1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QQSlideMenu/Info.plist;
